@@ -6,7 +6,7 @@
 #    By: dcavalei <dcavalei@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/31 13:03:52 by dcavalei          #+#    #+#              #
-#    Updated: 2021/06/09 16:34:22 by dcavalei         ###   ########.fr        #
+#    Updated: 2021/12/21 12:10:06 by dcavalei         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,14 +29,14 @@ libft:
 			@$(MAKE) -C libft/
 
 bonus:		libft $(BONUS_OBJS)
-			@$(CC) -o $(NAME_BONUS) $(CFLAGS) $(INCLUDE) $(LIB) $(BONUS_OBJS)
+			@$(CC) -o $(NAME_BONUS) $(CFLAGS) $(INCLUDE) $(BONUS_OBJS) $(LIB)
 
 .c.o:
 			@echo "Creating object: $@"
 			@$(CC) $(CFLAGS) $(INCLUDE) -c $< -o $@
 
 $(NAME):	$(OBJS)
-			@$(CC) -o $(NAME) $(CFLAGS) $(INCLUDE) $(LIB) $(OBJS)
+			@$(CC) -o $(NAME) $(CFLAGS) $(INCLUDE) $(OBJS) $(LIB)
 
 clean:
 			@rm -f $(OBJS)

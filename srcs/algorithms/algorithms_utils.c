@@ -6,7 +6,7 @@
 /*   By: dcavalei <dcavalei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/09 15:54:17 by dcavalei          #+#    #+#             */
-/*   Updated: 2021/06/09 15:54:39 by dcavalei         ###   ########.fr       */
+/*   Updated: 2021/12/21 12:09:33 by dcavalei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,11 @@ int	divide_stack(t_list **src, t_list **dest,
 	void (*p)(t_list **, t_list **), void (*r)(t_list **), int pivot)
 {
 	t_list	*current;
-	int		trigger;
 	int		counter;
 
 	counter = 0;
 	if (!(*src))
 		return (counter);
-	trigger = 1;
 	while (!is_all_big_equal_than(*src, pivot))
 	{
 		current = ft_lstlast(*src);

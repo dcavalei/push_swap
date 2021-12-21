@@ -6,7 +6,7 @@
 /*   By: dcavalei <dcavalei@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/04 11:29:48 by dcavalei          #+#    #+#             */
-/*   Updated: 2021/06/09 15:54:09 by dcavalei         ###   ########.fr       */
+/*   Updated: 2021/12/21 12:06:56 by dcavalei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,9 +77,6 @@ void	algorithm(t_list **stack_a, t_list **stack_b)
 
 int	smaller_equal(t_list *src, int pivot)
 {
-	t_list	*current;
-
-	current = src;
 	while (src)
 	{
 		if (ctoi(src) > pivot)
